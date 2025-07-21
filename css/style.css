@@ -1,0 +1,203 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Glacial Indifference', sans-serif;
+    color: #212121;
+}
+
+.hero-background {
+    background-color: #DDDDDD;
+    min-height: 100vh;
+    position: relative;
+    padding: 5vh 4vw;
+    box-sizing: border-box;
+}
+
+.header-wrapper {
+    position: absolute;
+    top: 48px; 
+    left: 52px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.logo-text {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800; 
+    font-size: 40px;
+    letter-spacing: 1.2px;
+    color: #1A1A1A;
+    margin: 0;
+    line-height: 1;
+}
+
+.dot {
+    color: #0081FF; 
+}
+
+.logo-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    font-size: 13px;
+    letter-spacing: 0;
+    color: #B3B3B3;
+    margin-top: 8px;
+    line-height: 1;
+}
+
+
+.section-title-wrapper {
+    position: absolute;
+    top: 2vh;
+    right: 4vw;
+    width: fit-content;
+    height: auto;
+}
+
+.section-number {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 158.3px; 
+    letter-spacing: 4.75px;
+    color: #1C1C1C;
+    position: relative;
+    line-height: 1;
+    margin: 0;
+}
+
+.section-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 43.17px; 
+    letter-spacing: 1.3px;
+    color: #373737;
+    margin: 0;
+    white-space: nowrap;
+}
+
+
+
+.about-me-container {
+    padding-top: 28vh;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-left: 15vw;
+    padding-right: 4vw;
+    box-sizing: border-box;
+}
+
+.about-me-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+
+.profile-image {
+    width: 300px;
+    height: auto;
+    border-radius: 16px;
+}
+
+
+.about-me-text {
+    max-width: 582px;
+    text-align: left;
+}
+
+.about-me-text h2 {
+    font-family: 'Glacial Indifference', sans-serif;
+    font-weight: normal;
+    font-size: 49.7px;
+    letter-spacing: 0.75px;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.about-me-text h1 {
+    font-family: 'Glacial Indifference', sans-serif;
+    font-weight: bold;
+    font-size: 71px;
+    letter-spacing: 1.06px;
+    margin: 8px 0 0 0;
+    line-height: 1.2;
+}
+
+
+.about-me-text p {
+    font-family: 'Glacial Indifference', sans-serif;
+    font-weight: normal;
+    font-size: 23.29px;
+    letter-spacing: 0px;
+    margin: 12px 0 0 0;
+    line-height: 1.4;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+
+    .social-icon {
+    display: inline-block;
+    margin-right: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.15);
+    
+    }
+
+
+
+.social-icon img {
+    width: 30px;
+    height: 30px;
+    display: block;
+}
+
+
+.clients-satisfaction {
+    align-self: flex-end;
+    text-align: right;
+    margin-right: 2vw;
+}
+
+.satisfaction-label {
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.prc-highlight {
+    color: #E93656;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.satisfaction-bar {
+    width: 0;
+    height: 6px;
+    background-color: #E93656;
+    animation: fill-bar 1.5s ease-out forwards;
+    border-radius: 6px;
+}
+
+@keyframes fill-bar {
+    to {
+        width: 100%;
+    }
+}
+
