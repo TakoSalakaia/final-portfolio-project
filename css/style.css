@@ -599,3 +599,130 @@ body {
 }
 
 
+.portfolio-section {
+  padding: 60px 20px;
+  background-color: #fff;
+  color: #2E2E2E;
+  font-family: 'Glacial-Bold', sans-serif;
+}
+
+.portfolio-title {
+  text-align: center;
+  font-size: 70px;
+  margin-bottom: 40px;
+  font-family: 'Glacial-Bold', sans-serif;
+}
+
+.portfolio-layout {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.filter-panel {
+  background: #15263E;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 12vw;
+  height: 100%;
+}
+
+.filter-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 40px 0;
+}
+
+.filter-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  padding: 5px 0;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 20px;
+  text-align: left;
+  width: 120px;
+  font-family: 'Glacial-Bold', sans-serif;
+  transition: color 0.3s ease;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  color: #E93656;
+}
+
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  width: fit-content;
+}
+
+.project-card {
+  position: relative;
+  width: 13vw;
+  height: 30vh;
+  overflow: hidden;
+}
+
+.project-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.03);
+}
+
+.card-details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(17, 17, 17, 0.8);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+.project-card:hover .card-details {
+  opacity: 1;
+}
+
+.icon {
+  width: 10px;
+  height: 10px;
+  border: 2px solid #E93656;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: transparent;
+  margin-bottom: 10px;
+}
+
+.timestamp {
+  color: #DDDDDD;
+  font-size: 11px;
+  margin-top: -5px;
+  font-family: 'Muli', sans-serif;
+}
+
+.label {
+  color: #FFFFFF;
+  font-size: 23px;
+  margin-top: -5px;
+  font-family: 'Glacial-Bold', sans-serif;
+}
