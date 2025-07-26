@@ -409,3 +409,70 @@ body {
   margin: 2px 0;
   text-decoration: none;
 }
+
+.my-services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 100px 0;
+}
+
+.single-service {
+  width: 285px;
+  height: 360px;
+  perspective: 1000px;
+  position: relative;
+}
+
+.single-service .face {
+  width: 100%;
+  height: 100%;
+  padding: 40px 30px; 
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 8px;
+  backface-visibility: hidden;
+  transition: transform 0.8s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.single-service .front {
+  background: #FAFAFA;
+  z-index: 2;
+}
+
+.single-service .back {
+  background: #15263E;
+  color: #fff;
+  transform: rotateY(180deg);
+  z-index: 1;
+}
+
+.service-back h3 {
+  font-family: 'Glacial Indifference', sans-serif;
+  font-size: 22px;
+  color: #ffffff;
+  text-align: center;
+  letter-spacing: 0.44px;
+  width: 120px;
+  height: 30px;
+  margin: 0 auto;
+  line-height: 30px;
+}
+
+
+.single-service:hover .front {
+  transform: rotateY(180deg);
+}
+
+.single-service:hover .back {
+  transform: rotateY(360deg);
+}
+
+
