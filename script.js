@@ -35,3 +35,45 @@ function fillBarsOnScroll() {
 
 window.addEventListener('scroll', fillBarsOnScroll);
 document.addEventListener('DOMContentLoaded', fillBarsOnScroll);
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const slides = [
+    {
+      text: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore..",
+      img: "pics/d3.svg",
+      name: "Anna Williams",
+      job: "UI/UX Specialist"
+    },
+    {
+      text: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore..",
+      img: "pics/d5.svg",
+      name: "John Smith",
+      job: "Web Developer"
+    },
+    {
+      text: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore..",
+      img: "pics/d4.svg",
+      name: "Saba Lopez",
+      job: "Project Manager"
+    }
+  ];
+
+  const textLeft = document.querySelector(".review-paragraph");
+  const photo = document.querySelector(".photo-border img");
+  const userName = document.querySelector(".user-fullname");
+  const userJob = document.querySelector(".user-position");
+  const dots = document.querySelectorAll(".nav-dot");
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+      dots.forEach(d => d.classList.remove("active"));
+      dot.classList.add("active");
+
+      textLeft.textContent = slides[index].text;
+      photo.src = slides[index].img;
+      userName.textContent = slides[index].name;
+      userJob.textContent = slides[index].job;
+    });
+  });
+});

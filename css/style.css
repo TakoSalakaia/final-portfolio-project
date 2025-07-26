@@ -476,3 +476,126 @@ body {
 }
 
 
+.reviews-area {
+  position: relative;
+  width: 100%;
+  background-image: url("../pics/clip.jpg");  
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  padding: 80px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.review-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+
+.review-left {
+  max-width: 500px;
+  text-align: right;
+  font-family: 'Roboto Light', sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.45px;
+  line-height: 1.5;
+}
+
+
+.review-photo-block {
+  position: relative;
+  width: 170px;
+  height: 170px;
+}
+
+.photo-border {
+  width: 100%;
+  height: 100%;
+  border: 2px dashed #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: border 0.3s ease;
+}
+
+.photo-border img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+
+.review-photo-block:hover .photo-border {
+  border: 2px solid transparent;
+}
+.review-photo-block:hover img {
+  width: 170px;
+  height: 170px;
+}
+
+
+.review-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.review-right .quote-icon {
+  width: 39px;
+  height: 26px;
+  margin-bottom: 10px;
+}
+
+.review-right .user-position {
+  font-family: 'Roboto Regular', sans-serif;
+  font-size: 13px;
+  color: #E93656;
+  letter-spacing: 0.52px;
+  margin-bottom: 6px;
+}
+
+.review-right .user-fullname {
+  font-family: 'GlacialIndifference-Bold', sans-serif;
+  font-size: 28px;
+  letter-spacing: 0.84px;
+  color: #fff;
+}
+
+
+.review-navigation {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  top: 50%;
+  right: -60px;
+  transform: translateY(-50%);
+}
+
+.nav-dot {
+  width: 13px;
+  height: 13px;
+  border: 2px solid #fff;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav-dot:hover {
+  border-color: #E93656;
+}
+
+.nav-dot.active {
+  border-color: #E93656;
+}
+
+
