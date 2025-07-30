@@ -77,3 +77,25 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const projectCards = document.querySelectorAll(".project-card");
+
+  filterButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      filterButtons.forEach(btn => btn.classList.remove("active"));
+      button.classList.add("active");
+      const selectedCategory = button.dataset.filter;
+
+      projectCards.forEach(card => {
+        const cardGroup = card.dataset.group;
+        card.style.display = selectedCategory === "all" || selectedCategory === cardGroup ? "block" : "none";
+      });
+    });
+  });
+
+}); 
+
+  
