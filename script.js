@@ -98,4 +98,81 @@ document.addEventListener("DOMContentLoaded", () => {
 
 }); 
 
-  
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("form-contact");
+    const modal = document.getElementById("modal-contact");
+
+    if (!form || !modal) {
+        console.error("ფორმა ან მოდალი ვერ მოიძებნა.");
+        return;
+    }
+
+    form.addEventListener("submit", async function (e) {
+        e.preventDefault();
+
+        const name = document.getElementById("input-name").value.trim();
+        const email = document.getElementById("input-email").value.trim();
+        const website = document.getElementById("input-website").value.trim();
+        const message = document.getElementById("input-message").value.trim();
+
+        const formData = {
+            name,
+            email,
+            website,
+            message
+        };
+
+        try {
+            const response = await fetch("https://borjomi.loremipsum.ge/api/send-message", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(formData)
+            });
+
+            const result = await response.json();
+
+            if (result.status === 1) {
+                modal.style.display = "flex"; 
+            } else {
+                alert("გაგზავნის შეცდომა: " + result.desc);
+            }
+
+        } catch (error) {
+            console.error("შეცდომა მოხდა:", error);
+
+            //jsonplaceholder
+            const fallbackData = {
+                title: name,
+                body: message,
+                userId: 1
+            };
+
+            try {
+                const fallbackRes = await fetch("https://jsonplaceholder.typicode.com/posts", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(fallbackData)
+                });
+
+                if (fallbackRes.ok) {
+                    modal.style.display = "flex";
+                } else {
+                    alert("სარეზერვო გაგზავნაც ვერ მოხერხდა.");
+                }
+            } catch (fallbackErr) {
+                alert("ვერცერთი გაგზავნა ვერ მოხერხდა.");
+            }
+        }
+    });
+});
+
+function closeCustomModal() {
+    const modal = document.getElementById("modal-contact");
+    if (modal) {
+        modal.style.display = "none";
+    }
+}
